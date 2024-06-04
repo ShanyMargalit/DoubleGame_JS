@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/Login.css">
+    <title>Log In</title>
+    <script src="../js/Login.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="login-content" id="logInContainer">
+            <form onsubmit="logInIsValid(event)" class="form1">
+                <img src="../images/‏‏סמלים/symbols-23.png">
+                <img src="../images/‏‏סמלים/symbols-13.png">
+                <img src="../images/‏‏סמלים/symbols-18.png">
+                <h2 class="title">Log In</h2>
+                <input type="email" class="input" placeholder="Email" required id="logInEmail">
+                <input type="password" class="input" placeholder="Password" required id="logInPassword">
+                <p id="logInMassage"></p>
+                <input type="submit" class="btn" value="Log In" id="submitlogIn">
+                <p>don't have an account yet? let's <b id="signUp" class="links" onclick="logInFunc('signUpContainer', 'logInContainer')">sign up</b></p>
+            </form>
+        </div>
+        <div class="login-content" id="signUpContainer">
+            <form onsubmit="signUpIsValid(event)" class="form1">
+                <img src="../images/‏‏סמלים/symbols-29.png">
+                <img src="../images/‏‏סמלים/symbols-27.png">
+                <img src="../images/‏‏סמלים/symbols-22.png">
+                <h2 class="title">Sign up</h2>
+                <input id="signUpName" type="text" class="input" placeholder="name" required>
+                <input id="signUpEmail" type="email" class="input" placeholder="Email" required>
+                <input id="signUpPassword" type="password" class="input" placeholder="Password" required>
+                <p id="signUpMassage"></p>
+                <input type="submit" class="btn" value="Sign Up" id="submitSignUp">
+                <p>already having an account? <b id="logIn" class="links">log In</b></p>
+            </form>
+        </div>
+    </div>
+</body> 
+</body>
+</html>

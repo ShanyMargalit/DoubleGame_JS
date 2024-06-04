@@ -1,0 +1,36 @@
+#title{
+    text-align: center;
+    font-size: 70px;
+    color: aliceblue;
+}
+#welcome{
+    text-align: center;
+    margin-left: 40px;
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    color: aliceblue;
+}
+h3{
+    text-align: center;   
+    font-size: 40px;
+    color: aliceblue;
+}
+h4{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(173, 217, 255);
+}
+body{
+background-image: url("../images/background.jpg");
+background-repeat: no-repeat;
+height: 50px;
+background-size: 100%;
+}
+img{
+    width: 200px;
+    height: 110px;
+    margin-right: 50%;
+    margin-left: 45%;
+}

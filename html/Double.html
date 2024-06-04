@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double</title>
+    <script src="../js/Double.js"></script>
+    <link rel="stylesheet" href="../css/Double.css">
+</head>
+<body onload="randomCards()">
+    <br>
+        <span id="title">Welcome to Double game!!!</span>
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div id="mainDiv">
+      <div id="bigCards">
+        <div class="randomCard" id="bigCard1"><img id="card1picture" src="../images/cards/card-01.png"></div>
+        <div class="randomCard" id="bigCard2"><img id="card2picture" src="../images/cards/card-01.png"></div>
+      </div>
+      <div id="buttonsDiv">
+        <div><a href="instruction.html"><img src="../images/הוראות עיגול עם לבן.png" style="height: 115px;width: 255px;"></a></div>
+        <div style="margin-top: 5px;"><a href="Double.html"><img src="../images/משחק חדש עם לבן.png" style="height: 100px;width: 250px;"></a></div>
+        <div><span id="spanPoints"> points : 0 </span></div>
+        <div id="seconds"></div>
+      </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div id="symbolsDiv">
+        <button class="img-buttons" onclick="btn('קוביות')" ><img src="../images/‏‏סמלים/symbols-01.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('גלגל')"><img src="../images/‏‏סמלים/symbols-02.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('מטריה')"><img src="../images/‏‏סמלים/symbols-03.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('כובע')"><img src="../images/‏‏סמלים/symbols-04.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('מספריים')"><img src="../images/‏‏סמלים/symbols-05.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('מחשבון')"><img src="../images/‏‏סמלים/symbols-06.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('ארטיק')"><img src="../images/‏‏סמלים/symbols-07.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('פרח')"><img src="../images/‏‏סמלים/symbols-08.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('גזר')"><img src="../images/‏‏סמלים/symbols-09.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('גלשן')"><img src="../images/‏‏סמלים/symbols-10.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('בקבוק')"><img src="../images/‏‏סמלים/symbols-11.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('טיל')"><img src="../images/‏‏סמלים/symbols-12.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('שעון')"><img src="../images/‏‏סמלים/symbols-13.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('תוף')"><img src="../images/‏‏סמלים/symbols-14.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('ספרים')"><img src="../images/‏‏סמלים/symbols-15.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('פפיון')"><img src="../images/‏‏סמלים/symbols-16.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('סיכת ביטחון')"><img src="../images/‏‏סמלים/symbols-17.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('כוכב ים')"><img src="../images/‏‏סמלים/symbols-18.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('אבטיח')"><img src="../images/‏‏סמלים/symbols-19.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('קרם הגנה')"><img src="../images/‏‏סמלים/symbols-20.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('סינר')"><img src="../images/‏‏סמלים/symbols-21.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('לב')"><img src="../images/‏‏סמלים/symbols-22.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('גלידה')"><img src="../images/‏‏סמלים/symbols-23.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('קשקשן')"><img src="../images/‏‏סמלים/symbols-24.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('קרטיב')"><img src="../images/‏‏סמלים/symbols-25.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('ירח')"><img src="../images/‏‏סמלים/symbols-26.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('שמש')"><img src="../images/‏‏סמלים/symbols-27.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('מיץ')"><img src="../images/‏‏סמלים/symbols-28.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('משקפיים')"><img src="../images/‏‏סמלים/symbols-29.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('כדור')"><img src="../images/‏‏סמלים/symbols-30.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('דובי')"><img src="../images/‏‏סמלים/symbols-31.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('ענן')"><img src="../images/‏‏סמלים/symbols-32.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('מצלמה')"><img src="../images/‏‏סמלים/symbols-33.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('עוגן')"><img src="../images/‏‏סמלים/symbols-34.png"   class="pictue-in-buttuns"  ></button>        
+        <button class="img-buttons" onclick="btn('כוכב')"><img src="../images/‏‏סמלים/symbols-35.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('גרב')"><img src="../images/‏‏סמלים/symbols-36.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('דלי')"><img src="../images/‏‏סמלים/symbols-37.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('טלסקופ')"><img src="../images/‏‏סמלים/symbols-38.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('כוכב לכת')"><img src="../images/‏‏סמלים/symbols-39.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('תו')"><img src="../images/‏‏סמלים/symbols-40.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('גלובוס')"><img src="../images/‏‏סמלים/symbols-41.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('אוטובוס')"><img src="../images/‏‏סמלים/symbols-42.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('מוצץ')"><img src="../images/‏‏סמלים/symbols-43.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('עציץ')"><img src="../images/‏‏סמלים/symbols-44.png"   class="pictue-in-buttuns"  ></button>        
+        <button class="img-buttons" onclick="btn('מטוס')"><img src="../images/‏‏סמלים/symbols-45.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('עפרון')"><img src="../images/‏‏סמלים/symbols-46.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('אניה')"><img src="../images/‏‏סמלים/symbols-47.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('כן ציור')"><img src="../images/‏‏סמלים/symbols-48.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('סקטבורד')"><img src="../images/‏‏סמלים/symbols-49.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('חציל')"><img src="../images/‏‏סמלים/symbols-50.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('רכבת')"><img src="../images/‏‏סמלים/symbols-51.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('שבשבת')"><img src="../images/‏‏סמלים/symbols-52.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('עגבניה')"><img src="../images/‏‏סמלים/symbols-53.png"   class="pictue-in-buttuns"  ></button>
+        <button class="img-buttons" onclick="btn('בלון')"><img src="../images/‏‏סמלים/symbols-54.png"   class="pictue-in-buttuns"  ></button>    
+        <button class="img-buttons" onclick="btn('חבל')"><img src="../images/‏‏סמלים/symbols-55.png"   class="pictue-in-buttuns"></button>
+        <button class="img-buttons" onclick="btn('ברווז')"><img src="../images/‏‏סמלים/symbols-56.png"   class="pictue-in-buttuns" ></button>
+        <button class="img-buttons" onclick="btn('פטריה')"><img src="../images/‏‏סמלים/symbols-57.png"   class="pictue-in-buttuns"  ></button>
+    </div>
+</body>
+</html>
