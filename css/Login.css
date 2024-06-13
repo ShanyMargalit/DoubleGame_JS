@@ -1,18 +1,20 @@
+/* CSS */
 .btn {
     width: 100%;
     height: 50px;
     border-radius: 25px;
     border: none;
-    background-image: linear-gradient(to right,rgb(255, 0, 76),#ffd000, rgb(25, 176, 202));
+    background-image: linear-gradient(to right, rgb(255, 0, 76), #ffd000, rgb(25, 176, 202));
     font-size: 1.2rem;
     color: #fff;
     font-family: 'Ink Free';
     margin: 40px 0;
     transition: 0.5s;
 }
+
 .btn:hover {
     background-position: right;
-    background-image: linear-gradient(to left, rgb(255, 0, 76),#ffd000, rgb(25, 176, 202));
+    background-image: linear-gradient(to left, rgb(255, 0, 76), #ffd000, rgb(25, 176, 202));
     transform: scale(104%);
 }
 
@@ -28,49 +30,51 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     background-image: url("../images/background.jpg");
-background-repeat: no-repeat;
-height: 50px;
-background-size: 100%;
-}
-.container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 7rem;
-    padding: 0 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.img {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
 }
 
 .login-content {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left:-20vw;
-    margin-top:-10vh;
-    height: 1000px;
-    width: 850px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
 }
-.img img {
-    width: 600px;
-}
-form {
-    width: 360px;
-}
+
 .login-content img {
     height: 100px;
 }
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
 .login-content h2 {
     margin: 15px 0;
     color: white;
     text-transform: uppercase;
-    font-size: 2.9rem;
+    font-size: 2.5rem;
 }
+
 .input {
     width: 100%;
     border: none;
@@ -80,29 +84,32 @@ form {
     padding: 0.5rem 0.7rem;
     font-size: 1.2rem;
     color: white;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 15px 0;
 }
+
 .links:hover {
     color: #2cd8d8;
 }
 
 @media screen and (max-width: 1050px) {
     .container {
-        grid-gap: 5rem;
+        grid-gap: 1rem;
     }
 }
 
 @media screen and (max-width: 1000px) {
     form {
-        width: 290px;
+        max-width: 290px;
     }
+
     .login-content h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         margin: 8px 0;
     }
-    .img img {
-        width: 400px;
+
+    .login-content img {
+        height: 80px;
     }
 }
 
@@ -110,10 +117,52 @@ form {
     .container {
         grid-template-columns: 1fr;
     }
-    .img {
-        display: none;
-    }
+
     .login-content {
-        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .login-content img {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .login-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .login-content img {
+        height: 50px;
+    }
+
+    .input {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .login-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-content img {
+        height: 40px;
+    }
+
+    .input {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        margin: 20px 0;
     }
 }
